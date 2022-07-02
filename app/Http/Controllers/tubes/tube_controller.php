@@ -1,27 +1,27 @@
 <?php
- 
+
 namespace App\Http\Controllers\tubes;
 use App\Http\Controllers\Controller;
 use App\Models\tube;
-use Illuminate\Support\Str;  
-use Illuminate\Http\Request;  
-use Illuminate\Support\Facades\Validator; 
-use SimpleSoftwareIO\QrCode\Facades\QrCode; 
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 class tube_controller extends Controller
 
 {
-    public   function create ()  
+    public   function create ()
     {
         $key=['2.5'=>'اسطوانة 2.5كغم ','5'=>'اسطوانة 5  كغم' ,'12'=>'اسطوانة 12  كغم','48'=>'اسطوانة 48 كغم '];
- 
-        return view('tubes.tubes_create')->with('key' ,$key);  
-    } 
+
+        return view('tubes.tubes_create')->with('key' ,$key);
+    }
 
 
     public  function store  (Request $request  ){
 
         $validator=Validator::make($request->all(),[
-//            'qr'=>'required', 
+//            'qr'=>'required',
             'weight'=>'required'
 
         ]);

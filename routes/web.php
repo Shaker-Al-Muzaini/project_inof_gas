@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/',static function () {
+    return view('welcome');
 
+});
 Route::post('store',[tube_controller::class,'store']);
 Route::get('home',[index::class,'home']);
 Route::get('index',[tube_controller::class,'index']);
