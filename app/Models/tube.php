@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property mixed $capacity
- * @property mixed $qr
  * @property mixed $weight
+ * @property mixed $tu
+ * @property mixed $qr_code_name
+ * @property mixed $id
+ * @property mixed|string $qr
  * @method static where(string $string)
  * @method static select(string $string, string $string1, string $string2, string $string3)
  */

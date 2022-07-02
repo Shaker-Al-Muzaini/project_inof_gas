@@ -1,6 +1,11 @@
 @extends('layouts.main')
 @section('bott')
     <div class="container">
+        @if(session('status'))
+            <div class="alert alert-success" role="alert">
+                {{session('status')}}
+            </div>
+        @endif
             <div class="col-12">
                 <div class="row">
                     <div class="col-12">
@@ -16,13 +21,15 @@
                                 </select>
                             </div>
                             <br>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">QR</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input" name="qr">
-                            </div>
+{{--                            <div class="input-group mb-3">--}}
+{{--                                <span class="input-group-text" id="inputGroup-sizing-default">QR</span>--}}
+{{--                                <input type="text" class="form-control" aria-label="Sizing example input" name="qr" value="{{old('nameQr')}}">--}}
+{{--                                @error('qr')<span class="text-danger">{{$message}}</span>@enderror--}}
+{{--                            </div>--}}
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">الوزن</span>
                                 <input type="text" class="form-control" aria-label="Sizing example input" name="weight">
+                                @error('weight')<span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary" id="save">Save</button>

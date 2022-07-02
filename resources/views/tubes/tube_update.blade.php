@@ -6,17 +6,6 @@
                 <div class="col-12">
                     <form action="{{URL('tube/update'.$tube->id)}}"  method="post" enctype="multipart/form-data">
                         @csrf
-{{--                        <div class="input-group input-group-lg">--}}
-{{--                            <span class="input-group-text" id="inputGroup-sizing-lg">سعه ألأنبوبه</span>--}}
-{{--                            <select name="capacity" class="form-control" id="" aria-label="Sizing example input" >--}}
-{{--                                <option value="!"></option>--}}
-{{--                                @foreach($capacity as $capacitys=>$value)--}}
-{{--                                    <option value="{{$capacitys}}" @if($capacitys ===$tube->capacity) selected @endif;--}}
-{{--                                    >{{$value}}--}}
-{{--                                    </option>--}}
-{{--                                @endforeach--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
                         <div class="input-group input-group-lg">
                             <span class="input-group-text" id="inputGroup-sizing-lg">capacity</span>
                             <select name="capacity" class="form-control" id="capacity" aria-label="Sizing example input">

@@ -3,6 +3,7 @@
 </style>
 @extends('layouts.main')
 @section('bott')
+
     <table class="table table-success table-striped">
         <thead>
         <th scope="col">حذف</th>
@@ -13,7 +14,7 @@
         <th scope="col">سعر كيلو الغاز</th>
         <th scope="col">كمية  الغاز داخل ألأسطونيه</th>
         <th scope="col"> وزن ألأسطونه كامل كغم</th>
-        <th scope="col">الرمز الخاص بالأسطوانة</th>
+        <th scope="col">im </th>
         <th scope="col">ID</th>
         </thead>
         <tbody>
@@ -32,10 +33,14 @@
                 <td>{{$tubes->price.'شيكل'}}</td>
                 <td >{{$tubes->capacity .'كغم'}}</td>
                 <td>{{$tubes->weight .'كغم'}}</td>
-                <td>{{$tubes->qr}}</td>
+                <td><img src="{{$tubes->tu}}" alt="null" height="80" width="100"></td>
+{{--                    @if(session('code'))--}}
+{{--                            <img src="{{asset('qr-code'.session('code'))}}" alt="{{session('code')}}">--}}
+{{--                    @endif--}}
                 <td >{{$tubes->id}}</td>
             </tr>
         @endforeach
+
         </tbody>
     </table>
     <div class="row">
@@ -48,7 +53,4 @@
     <div>
         <a href="{{URL('tubes/create')}}">أضافه اسطونه جديدة</a>
         <br>
-
-
-
 @stop

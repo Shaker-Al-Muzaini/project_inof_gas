@@ -24,5 +24,4 @@
                         <button type="submit" class="btn btn-primary" id="save">Save</button>
                     </form>
 
-
 @stop
