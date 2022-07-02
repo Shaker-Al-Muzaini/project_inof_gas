@@ -4,7 +4,7 @@ php:
     - no_unused_imports
   finder:
     not-name:
-      - index.php
+      - driver_index.blade.php.blade.php.php
 js:
   finder:
     not-name:

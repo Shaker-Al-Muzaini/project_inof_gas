@@ -13,14 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('drivers', static function (Blueprint $table){
-            $table->bigIncrements('id');
-            $table->string('name-driver');
-            $table->string('name-driver');
-            $table->string('type-car');
-            $table->timestamps();
-
-        });
+        //
     }
 
     /**
@@ -30,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::drop('drivers');
+        //
     }
 };

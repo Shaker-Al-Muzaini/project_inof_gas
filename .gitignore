@@ -5,7 +5,5 @@
 Homestead.json
 npm-debug.log
 yarn-error.log
-
-
 # Project exclude paths
 /node_modules/

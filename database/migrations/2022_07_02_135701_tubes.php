@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('tubes', static function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('status');
+            $table->string('capacity');
             $table->string('qr');
+            $table->string('weight');
             $table->timestamps();
 
         });
