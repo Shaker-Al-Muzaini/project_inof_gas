@@ -18,8 +18,10 @@
                                     @foreach($key as $capacitys=>$value)
                                         <option value= "{{$capacitys}}">{{$value}}</option>
                                     @endforeach
+
                                 </select>
                             </div>
+                            @error('capacity')<span class="text-danger">{{$message}}</span>@enderror
                             <br>
 {{--                            <div class="input-group mb-3">--}}
 {{--                                <span class="input-group-text" id="inputGroup-sizing-default">QR</span>--}}
@@ -28,9 +30,10 @@
 {{--                            </div>--}}
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">الوزن</span>
+
                                 <input type="text" class="form-control" aria-label="Sizing example input" name="weight">
-                                @error('weight')<span class="text-danger">{{$message}}</span>@enderror
                             </div>
+                            @error('weight')<span class="text-danger">{{$message}}</span>@enderror
                             <br>
                             <button type="submit" class="btn btn-primary" id="save">Save</button>
                         </form>

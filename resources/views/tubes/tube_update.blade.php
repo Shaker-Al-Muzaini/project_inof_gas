@@ -20,10 +20,10 @@ r
                             <br>
                         </div>
                         <br>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">QR</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" name="qr" value="{{$tube->qr}}">
-                        </div>
+{{--                        <div class="input-group mb-3">--}}
+{{--                            <span class="input-group-text" id="inputGroup-sizing-default">QR</span>--}}
+{{--                            <input type="text" class="form-control" aria-label="Sizing example input" name="qr" value="{{$tube->qr}}">--}}
+{{--                        </div>--}}
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">الوزن</span>
                             <input type="text" class="form-control" aria-label="Sizing example input" name="weight" value="{{$tube->weight}}">

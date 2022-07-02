@@ -21,14 +21,13 @@ class tube_controller extends Controller
     public  function store  (Request $request  ){
 
         $validator=Validator::make($request->all(),[
-//            'qr'=>'required',
-            'weight'=>'required'
-
+            'weight'=>'required',
+            'capacity'=>'required',
         ]);
         if($validator->fails()){
             return back()->withErrors($validator);
         }
-        $capacity=$request['capacity'];
+        $capacity=$request['capacity']??'12';
         $price=6;
         $qr=str(random_int(1,10000000));
         $qr_code_name=Str::slug($qr).'.png';
@@ -41,11 +40,15 @@ class tube_controller extends Controller
         $tube->weight=$request['weight'];
         $tube->qr=$qr;
         $tube->tu='/qr-code/'.$qr_code_name;
-        $sev= QrCode::format('png')->generate($g,'../public/qr-code/'.$qr_code_name);
+        $sev= QrCode::format('png');
+        $sev->size(300);
+        $sev->errorCorrection('H');
+        $sev->backgroundColor(112, 238, 255);
+//        $sev->color('');
+        $sev->generate($g,'../public/qr-code/'.$qr_code_name);
         $tube->save();
      return redirect('index');
     }
-
 
     public function index2(Request $request,$id){
         define('pagination',5);
@@ -62,7 +65,7 @@ class tube_controller extends Controller
     public function index(Request $request)
     {
 
-        define('pagination',10);
+        define('pagination',5);
                 $tube=tube::select('id','created_at','updated_at','qr','weight','capacity','tu')
             ->paginate(pagination);
         foreach($tube as $tubes) {
@@ -84,16 +87,14 @@ class tube_controller extends Controller
     public  function  update (Request $request, $id){
         $idd=$id;
         $capacity=$request['capacity'];
-        $qr=$request['qr'];
         $weight=$request['weight'];
         $price=6;
         $price_count=$capacity*$price;
         $tube=tube::where('id',$id)->first();
         $tube->capacity=$capacity;
-        $tube->qr=$qr;
         $tube->weight=$weight;
         $tube->save();
-        return redirect('tubes/create');
+        return redirect('index');
     }
 
     public  function  destroy($id){
