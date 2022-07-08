@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\tube; 
 use Illuminate\Http\Request; 
  
-class tube_controller extends Controller
+class tube_controller extends Controller 
 { 
     public   function create ()
     {
