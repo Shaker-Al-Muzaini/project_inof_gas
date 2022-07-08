@@ -28,7 +28,7 @@ class tube_controller extends Controller
         $tube->qr=$qr;
         $tube->weight=$weight; 
         $tube->save();
-        return redirect('index');
+        return redirect('index'); 
 
     }
 
