@@ -19,7 +19,7 @@ class tube_controller extends Controller
     public  function store  ( Request $request){
 
         $capacity=$request['capacity'];
-        $qr=$request['qr'];
+        $qr=$request['qr']; 
         $weight=$request['weight'];
         $price=6;
         $price_count=$capacity*$price;
