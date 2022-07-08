@@ -24,7 +24,7 @@ class tube_controller extends Controller
         $price=6;
         $price_count=$capacity*$price;
         $tube=new tube();
-        $tube->capacity=$capacity;
+        $tube->capacity=$capacity; 
         $tube->qr=$qr;
         $tube->weight=$weight; 
         $tube->save();
