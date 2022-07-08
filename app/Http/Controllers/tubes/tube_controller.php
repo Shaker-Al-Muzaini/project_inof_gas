@@ -4,7 +4,7 @@ namespace App\Http\Controllers\tubes;
 
 use App\Http\Controllers\Controller;
 use App\Models\tube; 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 
 class tube_controller extends Controller
 { 
