@@ -45,7 +45,7 @@ class tube_controller extends Controller
 
     }
 
-    public  function edit($id){
+    public  function edit($id){ 
         $tube=tube::where('id',$id)
             ->first();
         $key=['2.5'=>'اسطوانة 2.5كغم ','5'=>'اسطوانة 5  كغم' ,'12'=>'اسطوانة 12  كغم','48'=>'اسطوانة 48 كغم '];
