@@ -26,7 +26,7 @@ class tube_controller extends Controller
         $tube=new tube();
         $tube->capacity=$capacity;
         $tube->qr=$qr;
-        $tube->weight=$weight;
+        $tube->weight=$weight; 
         $tube->save();
         return redirect('index');
 
