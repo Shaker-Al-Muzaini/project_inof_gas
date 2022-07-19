@@ -9,7 +9,7 @@ class index extends Controller
 
 {
 
-    public   function create()
+    public   function create() 
     {
         return view('stores.store_create');
     }
