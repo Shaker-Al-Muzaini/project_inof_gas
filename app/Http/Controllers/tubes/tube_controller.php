@@ -31,7 +31,7 @@ class tube_controller extends Controller
         $price=6;
         $qr=str(random_int(1,10000000));
         $qr_code_name=Str::slug($qr).'.png';
-        $price_count=$capacity*$price;
+        $price_count=$capacity*$price; 
         $tube=new tube;
         $st=tube::get(['id'])->pluck('id')->last()+1;
         $r='127.0.0.1:8000/';
