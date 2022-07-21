@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\tubes;     
-use App\Http\Controllers\Controller;    
+use App\Http\Controllers\Controller;     
 use App\Models\tube;  
 use Illuminate\Support\Str;   
 use Illuminate\Http\Request;  
