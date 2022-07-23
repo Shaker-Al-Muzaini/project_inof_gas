@@ -29,7 +29,7 @@ class tube_controller extends Controller
         }
         $capacity=$request['capacity']??'12';
         $price=6;
-        $qr=str(random_int(1,10000000));
+        $qr=str(random_int(1,10000000)); 
         $qr_code_name=Str::slug($qr).'.png';
         $price_count=$capacity*$price; 
         $tube=new tube;
