@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use SimpleSoftwareIO\QrCode\Facades\QrCode; 
 class tube_controller extends Controller
-  
+   
 {
     public   function create () 
     {
