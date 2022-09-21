@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Http\Controllers\tubes;           
 use App\Http\Controllers\Controller;             
 use App\Models\tube;      
